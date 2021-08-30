@@ -1,0 +1,11 @@
+cd "C:\Program Files\Docker\Docker"
+
+./DockerCli.exe -SwitchDaemon
+
+===>cmd
+
+Stop-Service *docker*        
+    Start-Service *docker*
+    &$Env:ProgramFiles\Docker\Docker\DockerCli.exe -SwitchWindowsEngine
+
+===>power  shell

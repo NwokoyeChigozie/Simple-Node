@@ -1,0 +1,53 @@
+with an organisation
+    inbox
+        sender id --- receiver id
+            message
+                time
+
+
+
+
+messages:
+    sender_id: string
+    receiver_id: string
+    message: string
+    sentAt: string
+    delivered: Boolean
+
+
+Events:
+    Sending:
+        User - User
+        User - Room
+
+
+Open Socket:
+    Request Variables:
+        type:
+            options:(inbox, room)
+        sender_id:
+        room_id/receiver_id:
+    response:
+        messages: map
+        status: Boolean
+
+Send Socket:
+    Request Variables:
+        message:
+    Response:
+        message: string
+        status: Boolean
+
+Send Socket:
+    Request Variables:
+        message:
+    Response:
+        message: string
+        status: Boolean
+        
+
+{"12am":['sen', 'message'],
+"1am": ["rec", "message"],
+"1am": ["rec", "message"],
+"1am": ["sen", "message"],
+}
